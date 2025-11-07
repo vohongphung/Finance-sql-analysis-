@@ -1,6 +1,6 @@
-CREATE DATABASE QLTaiChinh
+CREATE DATABASE QLTaiChinh2
 GO
-USE QLTaiChinh
+USE QLTaiChinh2
 go
 -- Users table
 CREATE TABLE Users (
@@ -15,7 +15,7 @@ CREATE TABLE Accounts (
     UserId INT NOT NULL,
     AccountName NVARCHAR(100) NOT NULL,
     AccountType NVARCHAR(50) NOT NULL,
-    Currency VARCHAR(10) DEFAULT 'USD',
+    
     
     CONSTRAINT FK_Accounts_Users FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
@@ -30,15 +30,23 @@ go
 -- Transactions table
 CREATE TABLE Transactions (
     TransactionId BIGINT IDENTITY(1,1) PRIMARY KEY,
-    UserId INT NOT NULL,
     AccountId INT NOT NULL,
     CategoryId INT NULL,
+    Currency VARCHAR(10) DEFAULT 'USD',
     Amount DECIMAL(10,2) NOT NULL,
     TransactionDate DATE NOT NULL,
-    Description NVARCHAR(255),
+    [Description] NVARCHAR(255),
     CreatedAt DATETIME2 DEFAULT SYSDATETIME(),
-    
-    CONSTRAINT FK_Transactions_Users FOREIGN KEY (UserId) REFERENCES Users(UserId),
+	PaymentMethod NVARCHAR(20)
+       
     CONSTRAINT FK_Transactions_Accounts FOREIGN KEY (AccountId) REFERENCES Accounts(AccountId),
     CONSTRAINT FK_Transactions_Categories FOREIGN KEY (CategoryId) REFERENCES Categories(CategoryId)
+);
+go
+ALTER TABLE Transactions
+ADD CONSTRAINT CK_Transactions_AmountSign
+CHECK (
+    (CategoryId = 1 AND Amount >= 0) OR
+    (CategoryId IN (2,3,4,5) AND Amount <= 0) OR
+    (CategoryId IS NULL)
 );

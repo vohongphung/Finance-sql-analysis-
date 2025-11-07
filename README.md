@@ -22,7 +22,7 @@ Example features:
 
 1.	Clone the repository
 Run git clone in cmd:
-git clone https://github.com/yourusername/PersonalFinanceDashboard.git
+git clone https://github.com/vohongphung/Finance-sql-analysis-/tree/main?tab=readme-ov-file
 2.	Run setup
 Double click to execute run_setup.bat
 Or run setup.sql in cmd: 
@@ -50,6 +50,7 @@ Tools Used
 
 **Vo Hong Phung**  
 Data Analyst / SQL Developer  
+
 
 
 

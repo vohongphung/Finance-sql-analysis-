@@ -1,16 +1,37 @@
 # 💰 Finance SQL Analysis
 
-This project is a small SQL Server database for managing and analyzing financial transactions.  
-It includes database tables, mock data, and some SQL views for data analysis.
+An interactive Power BI dashboard for analyzing monthly income and expenses, featuring dynamic currency conversion (USD, EUR, VND) and metric comparison across time periods.
+Built entirely with SQL Server, Power Query, and DAX, this project demonstrates end-to-end data modeling and dashboard design skills.
 
----
+________________________________________
+
+🧩 Features
+✅ Dynamic currency conversion using DAX
+✅ Metric toggle — Income, Expense, or Balance
+✅ Month-Year timeline slicer
+✅ Data validation via SQL test scripts
+✅ Ready-to-run SQL views for analytics 
+✅ Compatible with Power BI or other BI tools for visualization
 
 ## 📂 Files
 
-- **schema.sql** — contains the database structure (tables, keys, and relationships).  
-- **views.sql** — includes SQL queries and views for financial analysis.  
-- **mock_data/** — folder with sample data for testing.  
-- **README.md** — this file.
+PersonalFinanceDashboard
+ ┣ 📂 mock_data/
+ ┃ ┣ accounts_mock.sql
+ ┃ ┣ categories_mock.sql
+ ┃ ┣ transactions_mock.sql
+ ┃ ┗ users_mock.sql
+ ┣ 📂 test/
+ ┃ ┣ test_smoke_query.sql
+ ┃ ┗ test_view_query.sql
+ ┣ 📂 PowerBI/
+ ┃ ┗ 📊 PersonalFinance_IncomeExpense_Analysis.pbix
+ ┣ schema.sql
+ ┣ views.sql
+ ┣ setup.sql
+ ┣ ⚙️ run_setup.bat
+ ┣ 🖼️ preview.png
+ ┗ README.md
 
 ---
 
@@ -27,19 +48,31 @@ Example features:
 
 ---
 
-## 🛠️ How to use
+## 🛠️ How to Run Locally
 
-1. Open `schema.sql` in SQL Server and run it to create the database.  
-2. Insert data from the `mock_data` folder or your own data.  
-3. Run queries in `views.sql` to see reports and summaries.  
+1.	Clone the repository
+Run git clone in cmd:
+git clone https://github.com/yourusername/PersonalFinanceDashboard.git
+2.	Run setup
+Double click to execute run_setup.bat
+Or run setup.sql in cmd: 
+sqlcmd -S localhost -E -i setup.sql
+3.	Open the dashboard
+Launch PersonalFinance_IncomeExpense_Analysis.pbix in Power BI Desktop.
+4.	Refresh data
+Power BI connects to SQL Server and loads mock data automatically.
 
 ---
 
+
 ## 💡 Tools used
 
-- Microsoft SQL Server (T-SQL)  
-- Mock data from Mockaroo  
-- GitHub for version control  
+Tools Used
+Power BI Desktop: Dashboard design & DAX modeling
+SQL Server: Data storage & query views
+Power Query (M): ETL and transformation
+GitHub: Version control & portfolio hosting
+Mockaroo: Sample data generation
 
 ---
 
@@ -47,4 +80,5 @@ Example features:
 
 **Vo Hong Phung**  
 Data Analyst / SQL Developer  
+
 

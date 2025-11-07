@@ -3,36 +3,6 @@
 An interactive Power BI dashboard for analyzing monthly income and expenses, featuring dynamic currency conversion (USD, EUR, VND) and metric comparison across time periods.
 Built entirely with SQL Server, Power Query, and DAX, this project demonstrates end-to-end data modeling and dashboard design skills.
 
-________________________________________
-
-🧩 Features
-✅ Dynamic currency conversion using DAX
-✅ Metric toggle — Income, Expense, or Balance
-✅ Month-Year timeline slicer
-✅ Data validation via SQL test scripts
-✅ Ready-to-run SQL views for analytics 
-✅ Compatible with Power BI or other BI tools for visualization
-
-## 📂 Files
-
-PersonalFinanceDashboard
- ┣ 📂 mock_data/
- ┃ ┣ accounts_mock.sql
- ┃ ┣ categories_mock.sql
- ┃ ┣ transactions_mock.sql
- ┃ ┗ users_mock.sql
- ┣ 📂 test/
- ┃ ┣ test_smoke_query.sql
- ┃ ┗ test_view_query.sql
- ┣ 📂 PowerBI/
- ┃ ┗ 📊 PersonalFinance_IncomeExpense_Analysis.pbix
- ┣ schema.sql
- ┣ views.sql
- ┣ setup.sql
- ┣ ⚙️ run_setup.bat
- ┣ 🖼️ preview.png
- ┗ README.md
-
 ---
 
 ## 🎯 What it does
@@ -80,5 +50,6 @@ Mockaroo: Sample data generation
 
 **Vo Hong Phung**  
 Data Analyst / SQL Developer  
+
 
 

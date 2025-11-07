@@ -38,11 +38,11 @@ Power BI connects to SQL Server and loads mock data automatically.
 ## 💡 Tools used
 
 Tools Used
-Power BI Desktop: Dashboard design & DAX modeling
-SQL Server: Data storage & query views
-Power Query (M): ETL and transformation
-GitHub: Version control & portfolio hosting
-Mockaroo: Sample data generation
+- Power BI Desktop: Dashboard design & DAX modeling
+- SQL Server: Data storage & query views
+- Power Query (M): ETL and transformation
+- GitHub: Version control & portfolio hosting
+- Mockaroo: Sample data generation
 
 ---
 
@@ -50,6 +50,7 @@ Mockaroo: Sample data generation
 
 **Vo Hong Phung**  
 Data Analyst / SQL Developer  
+
 
 
 
